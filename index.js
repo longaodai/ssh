@@ -1,6 +1,5 @@
 const { Client } = require('ssh2');
 const core = require('@actions/core');
-const fs = require('fs');
 
 async function main() {
     const conn = new Client();

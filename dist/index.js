@@ -7,7 +7,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var _require = require('ssh2'),
   Client = _require.Client;
 var core = require('@actions/core');
-var fs = require('fs');
 function main() {
   return _main.apply(this, arguments);
 }

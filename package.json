@@ -33,8 +33,6 @@
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0"
+    "@babel/preset-env": "^7.24.0"
   }
 }
