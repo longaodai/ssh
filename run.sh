@@ -1,8 +1,0 @@
-#!/bin/bash
-
-HOST=$1
-USERNAME=$2
-SSH_KEY_PATH=$3
-COMMAND=$4
-
-ssh -i $SSH_KEY_PATH $USERNAME@$HOST "$COMMAND"

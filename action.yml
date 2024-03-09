@@ -1,5 +1,5 @@
-name: SSH Action
-description: Execute SSH commands on a remote server
+name: 'SSH Action'
+description: 'Execute SSH commands on a remote server'
 inputs:
   host:
     description: 'Remote host'
@@ -7,12 +7,12 @@ inputs:
   username:
     description: 'SSH username'
     required: true
-  ssh_key_path:
-    description: 'Path to SSH private key'
+  password:
+    description: 'SSH password'
     required: true
   command:
     description: 'Command to execute on the remote server'
     required: true
 runs:
-  using: 'bash'
-  main: 'run.sh'
+  using: 'docker'
+  image: 'vochilong/ssh-action:latest'
