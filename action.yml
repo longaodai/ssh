@@ -15,4 +15,4 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'vochilong/ssh-action:latest'
+  image: 'docker://vochilong/ssh-action:latest'
