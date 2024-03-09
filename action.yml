@@ -16,4 +16,4 @@ inputs:
     required: true
 runs:
   using: 'node12'
-  main: 'ssh-action.js'
+  main: 'index.js'
