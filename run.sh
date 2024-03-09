@@ -2,7 +2,7 @@
 
 HOST=$1
 USERNAME=$2
-PASSWORD=$3
+SSH_KEY_PATH=$3
 COMMAND=$4
 
-sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no $USERNAME@$HOST "$COMMAND"
+ssh -i $SSH_KEY_PATH $USERNAME@$HOST "$COMMAND"

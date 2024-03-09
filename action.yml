@@ -1,5 +1,5 @@
-name: Bash SSH Action
-description: Execute SSH commands on a remote server using Bash
+name: SSH Action
+description: Execute SSH commands on a remote server
 inputs:
   host:
     description: 'Remote host'
@@ -7,8 +7,8 @@ inputs:
   username:
     description: 'SSH username'
     required: true
-  password:
-    description: 'SSH password'
+  ssh_key_path:
+    description: 'Path to SSH private key'
     required: true
   command:
     description: 'Command to execute on the remote server'
