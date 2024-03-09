@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/longaodai/ssh/issues"
   },
-  "homepage": "https://github.com/longaodai/ssh#readme"
+  "homepage": "https://github.com/longaodai/ssh#readme",
+  "publishConfig": {
+    "@longaodai:registry": "https://npm.pkg.github.com"
+  }
 }
