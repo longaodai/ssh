@@ -1,0 +1,19 @@
+name: 'SSH Action'
+description: 'Connect to a remote server via SSH and execute commands'
+inputs:
+  host:
+    description: 'Hostname or IP address of the remote server'
+    required: true
+  port:
+    description: 'SSH port of the remote server (default: 22)'
+    required: false
+    default: '22'
+  username:
+    description: 'SSH username'
+    required: true
+  password:
+    description: 'SSH password'
+    required: true
+runs:
+  using: 'node12'
+  main: 'ssh-action.js'

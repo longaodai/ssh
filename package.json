@@ -23,5 +23,10 @@
   "homepage": "https://github.com/longaodai/ssh#readme",
   "publishConfig": {
     "@longaodai:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "ssh2": "^1.15.0"
   }
 }
