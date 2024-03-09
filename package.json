@@ -1,7 +1,7 @@
 {
   "name": "@longaodai/ssh",
   "version": "1.0.0",
-  "description": "Support Github action ssh",
+  "description": "Support Github action ssh.",
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
