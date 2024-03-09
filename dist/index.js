@@ -6,6 +6,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var _require = require('ssh2'),
   Client = _require.Client;
+var core = require('@actions/core');
 var fs = require('fs');
 function main() {
   return _main.apply(this, arguments);
@@ -21,7 +22,7 @@ function _main() {
           return new Promise(function (resolve, reject) {
             conn.on('ready', function () {
               console.log('SSH connection established');
-              conn.exec(process.env.COMMAND, function (err, stream) {
+              conn.exec('ls -la', function (err, stream) {
                 if (err) throw err;
                 stream.on('close', function (code, signal) {
                   console.log('Stream closed');
@@ -37,10 +38,10 @@ function _main() {
               console.error('SSH connection error:', err);
               reject(err);
             }).connect({
-              host: process.env.HOST,
-              port: process.env.PORT || 22,
-              username: process.env.USERNAME,
-              password: process.env.PASSWORD
+              host: core.getInput('host'),
+              port: 22,
+              username: core.getInput('username'),
+              password: core.getInput('password')
             });
           });
         case 3:

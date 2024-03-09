@@ -1,4 +1,5 @@
 const { Client } = require('ssh2');
+const core = require('@actions/core');
 const fs = require('fs');
 
 async function main() {
@@ -6,7 +7,7 @@ async function main() {
     await new Promise((resolve, reject) => {
         conn.on('ready', () => {
             console.log('SSH connection established');
-            conn.exec(process.env.COMMAND, (err, stream) => {
+            conn.exec('ls -la', (err, stream) => {
                 if (err) throw err;
                 stream.on('close', (code, signal) => {
                     console.log('Stream closed');
@@ -22,10 +23,10 @@ async function main() {
             console.error('SSH connection error:', err);
             reject(err);
         }).connect({
-            host: process.env.HOST,
-            port: process.env.PORT || 22,
-            username: process.env.USERNAME,
-            password: process.env.PASSWORD,
+            host: core.getInput('host'),
+            port: 22,
+            username: core.getInput('username'),
+            password: core.getInput('password'),
         });
     });
 }

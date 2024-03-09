@@ -4,7 +4,8 @@
   "description": "Support Github action ssh.",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "build": "npx babel index.js --out-file dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "ssh2": "^1.15.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "gulp": "^4.0.2",
