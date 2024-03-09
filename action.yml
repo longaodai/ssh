@@ -15,4 +15,4 @@ inputs:
     required: true
 runs:
   using: 'bash'
-  main: 'run_ssh.sh'
+  main: 'run.sh'
